@@ -1,0 +1,130 @@
+/* body {
+    color: linear-gradient(rgb(172, 1, 35));
+} */
+
+#nav {
+    text-align: end;
+}
+
+#nav li {
+    display: inline-block;
+}
+
+#nav a {
+    /* color: rgb(231, 188, 79); */
+    padding: 10px;
+    font-weight: 400;
+    font-family: Cambria;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    color: green;
+    background-color: black;
+}
+
+#blogsBtn {
+    font-family: Cambria;
+    text-decoration: none;
+}
+
+#blogsBtn:hover {
+    color: green;
+    background-color: black;
+}
+
+#createBlogBtn {
+    font-family: Cambria;
+    text-decoration: none;
+}
+
+#createBlogBtn:hover {
+    color: green;
+    background-color: black;
+}
+
+#about {
+    /* color: rgb(250, 225, 112); */
+    font-weight: 500;
+    font-family: Cambria;
+}
+
+#aboutus {
+    /* color: rgb(250, 225, 112); */
+    font-weight: 500;
+}
+
+#about:hover {
+    color: green;
+    background-color: black;
+}
+
+#copyright {
+    font-family: Cambria;
+}
+
+/* #foot {
+    background-color: rgb(31, 107, 31);
+    text-align: center;
+} */
+
+.login {
+    /* border: solid 2px black;
+    border-radius: 40%;
+    padding: 3px;
+    background-color: rgb(70, 70, 70); */
+    font-family: Cambria;
+}
+
+.signup {
+    /* border: solid 2px black;
+    border-radius: 40%;
+    padding: 3px;
+    background-color: rgb(70, 70, 70); */
+    font-family: Cambria;
+}
+
+/* #home {
+    border: solid 2px black;
+    border-radius: 40%;
+    padding: 3px;
+    background-color: rgb(70, 70, 70);
+} */
+
+/* #welcome {
+    background-color: rgb(4, 54, 4);
+    border: ridge 5px rgba(44, 248, 170, 0.829);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    box-shadow: 4px 8px rgba(250, 225, 112, 0.76);
+} */
+
+.well {
+    /* color: rgb(250, 225, 112); */
+    font-family: Cambria;
+    text-align: center;
+    padding: 3%;
+}
+
+.bg {
+    background-image: url(https://jooinn.com/images/earth-from-space-13.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #sign-master {
+    /* padding-left: 300px;
+    color: rgb(250, 225, 112);
+    background-color: rgb(70, 70, 70);
+    background-size: auto;
+} */
+
+.createBlogForm {
+    font-family: Cambria;
+}
+
+#body {
+    min-height:500px;
+    height:100%;
+    width:100%;
+}

@@ -1,0 +1,66 @@
+<%- include('./parts/head.ejs') -%>
+<nav class="sticky-top navbar navbar-expand-lg navbar-light bg-warning bg-gradient">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-success" href="/">
+        <img src="https://img.icons8.com/ios-filled/50/000000/domain.png" alt="www" width="30" height="24" class="d-inline-block align-text-top"> 
+        Calisthenics Motivation Corp.
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul id="nav" class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<div class="text-center container my-5 p-5 bg-secondary bg-gradient border border-5 border-warning rounded">
+    <form class="login fst-normal fw-bold" id="form" method="POST">
+        <h2 class="p-2">Log In</h2>
+        <label class="m-3" for="username">Username:</label>
+        <input type="text" id="username" placeholder="username" name="username" required>
+        <p id="usernameError"></p>
+        <label class="m-3" for="password">Password:</label>
+        <input type="password" id="password" placeholder="password" name="password" required>
+        <p id="passwordError"></p>
+        <button class="btn-success">Enter</button>
+    </form>
+</div>
+<script>
+    const form = document.getElementById('form');
+    const userError = document.getElementById('usernameError');
+    const passError = document.getElementById('passwordError');
+    form.addEventListener('submit', async e => {
+        e.preventDefault();
+
+        userError.innerHTML = '';
+        passError.innerHTML = '';
+
+        const user = form["username"].value;
+        const pass = form["password"].value;
+
+        try {
+            const response = await fetch('/login', {
+                method: 'POST',
+                body: JSON.stringify({user, pass}),
+                headers: {'Content-Type': 'application/json'}
+            });
+            const result = await response.json();
+            if(result.e){
+                userError.innerHTML = result.e.user;
+                passError.innerHTML = result.e.pass;
+            }
+            if(result.acc){
+                location.assign('/');
+            }
+        } catch(err) {
+            console.log(err);
+        }
+    });
+</script>
+<%- include('./parts/footer.ejs') -%>
+</body>
+</html>

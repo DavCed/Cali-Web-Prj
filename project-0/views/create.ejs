@@ -1,0 +1,17 @@
+<%- include('./parts/head.ejs') -%>
+<%- include('./parts/nav.ejs') -%>
+<div class="text-center container my-5 p-5 bg-secondary bg-gradient border border-5 border-warning rounded">
+    <form class="createBlogForm fst-normal fw-bold" action="/blogs" method="POST">
+        <h2 class="p-2">Blog About It!</h2>
+        <label class="m-3" for="title">Title:</label>
+        <input type="text" id="title" placeholder="enter title" name="title" required>
+        <p></p>
+        <label class="m-2" for="body">Body:</label>
+        <textarea id="body" placeholder="enter details here..." name="body" required></textarea>
+        <p></p>
+        <button class="btn-success">Submit</button>
+    </form>
+</div>
+<%- include('./parts/footer.ejs') -%>
+</body>
+</html>
