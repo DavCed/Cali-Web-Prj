@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 app.use(exp.static('pub'));
 app.use(exp.json());
 
-const db = 'mongodb+srv://chezzy:iLOVEsoftware@cluster0.if5wm.mongodb.net/calis?retryWrites=true&w=majority';
+const db = 'mongodb+srv://{username}:{password}@cluster0.if5wm.mongodb.net/calis?retryWrites=true&w=majority';
 mg.connect(db, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
     .then(data => app.listen(3000))
     .catch(err => console.log(err));
